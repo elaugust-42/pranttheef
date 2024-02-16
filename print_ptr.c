@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_ptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elaugust <elaugust@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eloyaraujo <eloyaraujo@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 18:29:59 by elaugust          #+#    #+#             */
-/*   Updated: 2024/02/16 15:04:08 by elaugust         ###   ########.fr       */
+/*   Updated: 2024/02/16 23:40:51 by eloyaraujo       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static char	*create_string(unsigned long value, int *strlen)
 	return (str);
 }
 
-int	print_pointer(void *ptr_addr)
+int	print_pointer(void *ptr_addr, int asc)
 {
 	unsigned long	tempval;
 	char			*printout;
@@ -47,7 +47,7 @@ int	print_pointer(void *ptr_addr)
 		if ((tempval % 16) < 10)
 			printout[i + 1] = (tempval % 16) + 48;
 		else
-			printout[i + 1] = (tempval % 16) + 'a';
+			printout[i + 1] = (tempval % 16) + asc;
 		tempval = tempval / 16;
 	}
 	i = ft_strlen(printout);

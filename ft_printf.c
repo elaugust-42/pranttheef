@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elaugust <elaugust@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eloyaraujo <eloyaraujo@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:25:12 by elaugust          #+#    #+#             */
-/*   Updated: 2024/02/16 15:43:47 by elaugust         ###   ########.fr       */
+/*   Updated: 2024/02/16 23:40:22 by eloyaraujo       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	format(const char *input, va_list *arg)
 	else if (*input == 's')
 		i += print_string((char *)va_arg(*arg, char *));
 	else if (*input == 'p')
-		i += print_pointer((void *)va_arg(*arg, void *));
+		i += print_pointer((void *)va_arg(*arg, void *), 87);
 	else if (*input == 'i' || *input == 'd')
 		i += print_int((int)va_arg(*arg, int));
 	else if (*input == 'u')

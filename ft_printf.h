@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elaugust <elaugust@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eloyaraujo <eloyaraujo@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:37:08 by elaugust          #+#    #+#             */
-/*   Updated: 2024/02/15 16:42:48 by elaugust         ###   ########.fr       */
+/*   Updated: 2024/02/16 23:41:52 by eloyaraujo       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 int		ft_printf(const char *__format, ...);
 int		print_char(char c);
 int		print_string(char *str);
-int		print_pointer(void *ptr_addr);
+int		print_pointer(void *ptr_addr, int asc);
 int		print_int(int n);
 int		print_unsigned(unsigned int nbr);
 int		print_hex(unsigned int nbr, int asc);
