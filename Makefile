@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: elaugust <elaugust@student.42.fr>          +#+  +:+       +#+         #
+#    By: eloyaraujo <eloyaraujo@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/10 16:28:35 by elaugust          #+#    #+#              #
-#    Updated: 2024/02/16 15:17:47 by elaugust         ###   ########.fr        #
+#    Updated: 2024/02/27 15:12:10 by eloyaraujo       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,12 +17,7 @@ CFLAGS = -Wall -Werror -Wextra -g
 LIBFTDIR = ./libft
 
 SRCS = 	ft_printf.c \
-		print_ptr.c \
-		print_unsigned.c \
-		print_str.c \
-		print_int.c \
-		print_char.c \
-		print_hexa.c \
+		ft_utils.c \
 
 OBJS = $(SRCS:.c=.o)
 
