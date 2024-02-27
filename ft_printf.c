@@ -3,14 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eloyaraujo <eloyaraujo@student.42.fr>      +#+  +:+       +#+        */
+/*   By: elaugust <elaugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 16:25:12 by elaugust          #+#    #+#             */
-/*   Updated: 2024/02/27 19:36:08 by eloyaraujo       ###   ########.fr       */
+/*   Created: 2024/02/27 19:54:54 by elaugust          #+#    #+#             */
+/*   Updated: 2024/02/27 21:53:36 by elaugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+char	*ft_strchr(const char *s, int c)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != (char)c && s[i] != '\0')
+		i++;
+	if (s[i] == (char)c)
+		return ((char *)(s + i));
+	return (NULL);
+}
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str && str[i])
+		i++;
+	return (i);
+}
 
 static int	format(const char *input, va_list *arg)
 {
@@ -52,7 +74,7 @@ int	ft_printf(const char *input, ...)
 				i += ft_putchar('%');
 		}
 		else
-			i = i + ft_putchar(*input);
+			i += ft_putchar(*input);
 		input++;
 	}
 	va_end(args);
